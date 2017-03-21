@@ -10,7 +10,7 @@ public interface LoadGifsInteractor {
 
     interface OnFinishedListener {
         void onFinished(GifList gifs);
-        void onFinishedError(GifList gifs, String error);
+        void onFinishedError(String error);
     }
 
     void loadGifs(OnFinishedListener onFinishedListener);

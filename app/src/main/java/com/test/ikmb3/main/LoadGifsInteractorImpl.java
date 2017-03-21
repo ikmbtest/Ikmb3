@@ -28,13 +28,13 @@ public class LoadGifsInteractorImpl implements LoadGifsInteractor {
                     GifList list = response.body();
                     onFinishedListener.onFinished(list);
                 } else {
-                    onFinishedListener.onFinishedError(null, "Error");
+                    onFinishedListener.onFinishedError("Error");
                 }
             }
 
             @Override
             public void onFailure(Call<GifList> call, Throwable t) {
-                onFinishedListener.onFinishedError(null, "Error");
+                onFinishedListener.onFinishedError("Error");
             }
         });
     }

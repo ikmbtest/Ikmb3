@@ -26,7 +26,7 @@ public class MainPresenterImpl implements MainPresenter {
                 }
 
                 @Override
-                public void onFinishedError(GifList gifs, String error) {
+                public void onFinishedError(String error) {
                     mainView.showError(error);
                 }
             });

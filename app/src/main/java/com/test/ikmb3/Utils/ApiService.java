@@ -12,7 +12,8 @@ import retrofit2.http.Query;
 
 public interface ApiService {
 
-    String API_KEY = "dc6zaTOxFJmzC";
+    String API_KEY_TESTING = "dc6zaTOxFJmzC";
+    String API_KEY_FINAL = ""; //TODO Pending for the release version
 
     @GET("v1/gifs/trending?")
     Call<GifList> getJsonGifs(@Query("limit") String limit, @Query("api_key") String key);

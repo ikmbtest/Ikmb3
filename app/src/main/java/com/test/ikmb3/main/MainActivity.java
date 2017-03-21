@@ -8,7 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.test.ikmb3.R;
-import com.test.ikmb3.Utils.GifsAdapter;
+import com.test.ikmb3.giphy.GifsAdapter;
+import com.test.ikmb3.Utils.ItemOffsetDecoration;
 import com.test.ikmb3.giphy.GifList;
 
 public class MainActivity extends AppCompatActivity implements MainView {
@@ -47,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements MainView {
         recyclerViewGifs.setLayoutManager(layoutManager);
         recyclerViewGifs.setItemAnimator(new DefaultItemAnimator());
         recyclerViewGifs.setAdapter(adapter);
+        ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(this, R.dimen.item_offset);
+        recyclerViewGifs.addItemDecoration(itemDecoration);
+
     }
 
     @Override

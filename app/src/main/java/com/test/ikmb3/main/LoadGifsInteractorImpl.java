@@ -19,7 +19,7 @@ public class LoadGifsInteractorImpl implements LoadGifsInteractor {
     public void loadGifs(final OnFinishedListener onFinishedListener) {
         ApiService api = RetroClient.getApiService(RetroClient.ROOT_URL_GIPHY);
 
-        Call<GifList> gifListCall = api.getJsonGifs("20", ApiService.API_KEY);
+        Call<GifList> gifListCall = api.getJsonGifs("20", ApiService.API_KEY_TESTING);
 
         gifListCall.enqueue(new Callback<GifList>() {
             @Override
